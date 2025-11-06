@@ -4,8 +4,8 @@ import React, { useState } from "react";
 import { Link } from "react-router-dom";
 
 const Menu = () => {
- const [selectedMenu, setSelectMenu]=useState(0);
-  const [isProfileDropdownOpen, setIsProfileDropdownOpen] = useState(false);
+ const [selectedMenu, setSelectedMenu]=useState(0);
+  
 
   const handleMenuClick = (index) => {
     setSelectedMenu(index);
