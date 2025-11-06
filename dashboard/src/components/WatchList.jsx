@@ -12,6 +12,7 @@ import { DoughnoutChart } from './DoughnoutChart';
 const API_URL = import.meta.env.VITE_API_URL;
 
 
+
 export default function WatchList(){
          const [companies, setCompanies] = useState([]);
          const [prices, setPrices] = useState({});
