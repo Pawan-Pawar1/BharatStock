@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import axios from "axios";
 import GeneralContextForSell from "./GeneralContextForSell"; // ✅ Context import
 import "./SellActionWindow.css";
-
+const API_URL = import.meta.env.VITE_API_URL;
 const SellActionWindow = ({ uid,price }) => {
   const [stockQuantity, setStockQuantity] = useState(1);
   const [stockPrice, setStockPrice] = useState(price);
@@ -13,7 +13,7 @@ const SellActionWindow = ({ uid,price }) => {
 
   const handleSellClick = async () => {
     try {
-      await axios.post("http://localhost:3002/newOrderSell", {
+      await axios.post(`${API_URL}/newOrderSell`, {
         name: uid,
         qty: stockQuantity,
         price: stockPrice,

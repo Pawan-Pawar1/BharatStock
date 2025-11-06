@@ -6,6 +6,8 @@ export default function Login(){
     const navigate = useNavigate();
       const [email, setEmail] = useState("");
       const [password, setPassword] = useState("");
+
+      const API_URL = process.env.REACT_APP_API_URL;
     const handleSubmit=(e)=>{
              e.preventDefault();
 
@@ -14,7 +16,7 @@ export default function Login(){
             return
         }
           axios
-               .post("http://localhost:3002/login", { email, password })
+               .post(`${API_URL}/login`, { email, password })
                 .then((res) => {
                      
                localStorage.setItem("auth", JSON.stringify(res.data));

@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
-
+const DASHBOARD_URL = process.env.REACT_APP_DASHBOARD_URL;
 function Navbar() {
   const [isLoggedIn, setIsLoggedIn] = useState(false);
 
@@ -65,7 +65,7 @@ function Navbar() {
               { isLoggedIn && (
                 <>
                 <li className="nav-item">
-                  <Link className="nav-link activ" to="http://localhost:5173/">DashBoard</Link>
+                  <Link className="nav-link activ" to={DASHBOARD_URL}>DashBoard</Link>
                 </li>
                 </>
               )

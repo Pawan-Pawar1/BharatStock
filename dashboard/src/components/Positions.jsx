@@ -2,12 +2,13 @@ import React, {useEffect, useState} from "react";
 
 
 import axios from "axios";
-
+import { Api } from "@mui/icons-material";
+const API_URL = import.meta.env.VITE_API_URL;
 // import {positions} from '../data/data'
 const Positions = () => {
   const [allPosition, setAllPosition] =useState([]);
  useEffect(()=>{
-       axios.get("http://localhost:3002/allPositions").then((res)=>{
+       axios.get(`${API_URL}/allPositions`).then((res)=>{
         setAllPosition(res.data);
        })
  },[])

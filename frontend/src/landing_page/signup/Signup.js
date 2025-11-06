@@ -7,7 +7,7 @@ export default function Signup() {
   const [email, setEmail] = useState("");
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
-
+  const API_URL = process.env.REACT_APP_API_URL;
   const handleSubmit = async (e) => {
     e.preventDefault();
 
@@ -19,7 +19,7 @@ export default function Signup() {
 
     try {
       
-      const res = await axios.post("http://localhost:3002/signup", {
+      const res = await axios.post(`${API_URL}/signup`, {
         email,
         username,
         password,

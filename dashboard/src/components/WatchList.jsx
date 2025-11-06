@@ -9,7 +9,7 @@ import GeneralContextForSell from './GeneralContextForSell';
 
 import { DoughnoutChart } from './DoughnoutChart';
 
-
+const API_URL = import.meta.env.VITE_API_URL;
 
 
 export default function WatchList(){
@@ -25,7 +25,7 @@ export default function WatchList(){
 
   useEffect(() => {
     axios
-      .get("http://localhost:3002/api/companies")
+      .get(`${API_URL}/api/companies`)
       .then((res) => setCompanies(res.data.data.slice(20, 500))) 
       .catch((err) => console.error(err));
   }, []);
@@ -36,7 +36,7 @@ export default function WatchList(){
       for (const c of companies) {
         try {
           const res = await axios.get(
-            `http://localhost:3002/api/price/${c.symbol}`
+            `${API_URL}/api/price/${c.symbol}`
           );
           setPrices((prev) => ({
             ...prev,
