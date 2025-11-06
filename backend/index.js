@@ -19,7 +19,7 @@ const PORT=process.env.PORT||3002;
 const url=process.env.MONGO_URL;
 
  
-const API_KEY="d66b37765a434491a7b8048793c2e197";
+const API_KEY=process.env.API_KEY;
 
 app.use(cors());
 app.use(bodyParser.json());
