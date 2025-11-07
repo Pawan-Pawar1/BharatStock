@@ -22,6 +22,7 @@ export default function Login(){
                localStorage.setItem("auth", JSON.stringify(res.data));
 
                  alert("Login successful!");
+                 window.location.reload();
                   navigate("/product"); 
     })
          
