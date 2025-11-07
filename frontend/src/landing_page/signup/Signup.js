@@ -31,7 +31,7 @@ export default function Signup() {
       localStorage.setItem("auth", JSON.stringify(res.data));
 
       alert("Signup successful!");
-      navigate("/"); 
+      navigate("/product"); 
     } catch (error) {
       console.error("Signup error:", error.response?.data || error.message);
 
