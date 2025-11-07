@@ -20,14 +20,18 @@ const url=process.env.MONGO_URL;
 
  
 const API_KEY=process.env.API_KEY;
-
-app.use(cors({
-   origin: [
-    "https://bharatstock-frontend.onrender.com",
-    "https://bharatstock-dashboard.onrender.com"
-  ]
-}
-));
+app.use(
+  cors({
+    origin: [
+      "https://bharatstock-frontend.onrender.com",  
+      "https://bharatstock-dashboards.onrender.com",
+      "http://localhost:5173",                      
+      "http://localhost:3000"
+    ],
+    methods: ["GET", "POST", "PUT", "DELETE"],
+    credentials: true,
+  })
+);
 app.use(bodyParser.json());
 app.use(cookieParser());
 
