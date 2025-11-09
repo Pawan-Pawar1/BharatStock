@@ -20,10 +20,11 @@ export default function Login(){
                 .then((res) => {
                      
                localStorage.setItem("auth", JSON.stringify(res.data));
-
+                     //  Trigger Navbar update instantly
+                         window.dispatchEvent(new Event("authChange"));
                  alert("Login successful!");
-                 window.location.reload();
-                  navigate("/product"); 
+                 
+                  navigate("/"); 
     })
          
     }

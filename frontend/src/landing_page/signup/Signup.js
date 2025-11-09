@@ -29,10 +29,12 @@ export default function Signup() {
 
       
       localStorage.setItem("auth", JSON.stringify(res.data));
+      //  Trigger Navbar update instantly
+    window.dispatchEvent(new Event("authChange")); 
+
 
       alert("Signup successful!");
-      window.location.reload();
-      navigate("/product"); 
+      navigate("/"); 
     } catch (error) {
       console.error("Signup error:", error.response?.data || error.message);
 

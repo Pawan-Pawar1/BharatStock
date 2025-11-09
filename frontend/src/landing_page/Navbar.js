@@ -1,24 +1,35 @@
 import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
+
 const DASHBOARD_URL = process.env.REACT_APP_DASHBOARD_URL;
+
 function Navbar() {
   const [isLoggedIn, setIsLoggedIn] = useState(false);
 
-  
   useEffect(() => {
+    // Check once on mount
     const auth = localStorage.getItem("auth");
-    if(auth){
-       setIsLoggedIn(!!auth);
-    }else{
-      setIsLoggedIn(false);
-    }
+    setIsLoggedIn(!!auth);
+
+    // Function to handle changes in login/logout
+    const handleAuthChange = () => {
+      const auth = localStorage.getItem("auth");
+      setIsLoggedIn(!!auth);
+    };
+
+    // Listen for custom "authChange" event
+    window.addEventListener("authChange", handleAuthChange);
+
+    // Cleanup listener when Navbar unmounts
+    return () => window.removeEventListener("authChange", handleAuthChange);
   }, []);
 
-  
   const handleLogout = () => {
     localStorage.removeItem("auth");
     setIsLoggedIn(false);
-    window.location.href = "/login"; 
+    // Inform other components (if any) that logout happened
+    window.dispatchEvent(new Event("authChange"));
+    window.location.href = "/login";
   };
 
   return (
@@ -47,7 +58,8 @@ function Navbar() {
         <div className="collapse navbar-collapse" id="navbarSupportedContent">
           <form className="d-flex" role="search">
             <ul className="navbar-nav mb-lg-0">
-              
+
+              {/* If not logged in */}
               {!isLoggedIn && (
                 <>
                   <li className="nav-item">
@@ -62,17 +74,19 @@ function Navbar() {
                   </li>
                 </>
               )}
-              { isLoggedIn && (
+
+              {/* If logged in */}
+              {isLoggedIn && (
                 <>
-                <li className="nav-item">
-                  <Link className="nav-link activ" to={DASHBOARD_URL}>DashBoard</Link>
-                </li>
+                  <li className="nav-item">
+                    {/* If dashboard is on another subdomain use <a> instead of <Link> */}
+                    <a className="nav-link active" href={DASHBOARD_URL} target="_blank" rel="noreferrer">
+                      Dashboard
+                    </a>
+                  </li>
                 </>
-              )
+              )}
 
-              }
-
-              
               <li className="nav-item">
                 <Link className="nav-link active" to="/about">
                   About
@@ -94,7 +108,6 @@ function Navbar() {
                 </Link>
               </li>
 
-              
               {isLoggedIn && (
                 <li className="nav-item">
                   <button

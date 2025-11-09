@@ -12,9 +12,11 @@ import ErrorPath from './landing_page/ErrorPath';
 import Navbar from './landing_page/Navbar';
 import Footer from './landing_page/Footer';
 import Login from './landing_page/signup/Login';
+import { AuthProvider } from './landing_page/context/AuthContext';
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <BrowserRouter>
+      <AuthProvider>
   <Navbar />
     <Routes>
       <Route path='/' element={<HomePage/>}/>
@@ -27,6 +29,7 @@ root.render(
       <Route path='*' element={<ErrorPath/>}/>
     </Routes>
     <Footer />
+    </AuthProvider>
   </BrowserRouter>
 );
 
