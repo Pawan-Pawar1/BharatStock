@@ -42,3 +42,13 @@ code {
   margin: 0 150px;
  }
  
+
+ .fake-link {
+  text-decoration: none;
+  color: #0d6efd; 
+  cursor: pointer;
+}
+
+.fake-link:hover {
+  text-decoration: underline;
+}
