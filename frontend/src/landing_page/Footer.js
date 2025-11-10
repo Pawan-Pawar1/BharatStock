@@ -7,18 +7,18 @@ function Footer(){
         <div className='container border-top mt-5'>
             <div className='row'>
                 <div className='col-lg-3 col-md-6 col-sm-3'>
-                    <img src='media/images/logo.svg' style={{width:"50%"}} alt='logo image'></img>
+                    <img src='media/images/logo.svg' style={{width:"50%"}} alt=''></img>
                     <p>&copy;2010 - 2025, Zerodha Broking Ltd.All rights reserved.</p>
                 </div>
                 <div className='col-lg-3 col-md-6 col-sm-3'>
                     <p>Company</p>
-                    <a href=''style={{textDecoration:"none"}} className='text-muted'>  Zerodha.tech </a><br></br>
-                    <a href=''style={{textDecoration:"none"}} className='text-muted'>  About </a><br></br>
-                    <a href=''style={{textDecoration:"none"}} className='text-muted'>  Open sour </a><br></br>
-                    <a href=''style={{textDecoration:"none"}} className='text-muted'>  Philosophy </a><br></br>
-                    <a href=''style={{textDecoration:"none"}} className='text-muted'>  Press & media </a><br></br>
-                    <a href=''style={{textDecoration:"none"}} className='text-muted'>  Zerodha Cares (CSR) </a><br></br>
-                    <a href=''style={{textDecoration:"none"}} className='text-muted'>  Careers </a><br></br>
+                    <a href='#'style={{textDecoration:"none"}} className='text-muted'>  Zerodha.tech </a><br></br>
+                    <a href='#'style={{textDecoration:"none"}} className='text-muted'>  About </a><br></br>
+                    <a href='#'style={{textDecoration:"none"}} className='text-muted'>  Open sour </a><br></br>
+                    <a href='#'style={{textDecoration:"none"}} className='text-muted'>  Philosophy </a><br></br>
+                    <a href='#'style={{textDecoration:"none"}} className='text-muted'>  Press & media </a><br></br>
+                    <a href='#'style={{textDecoration:"none"}} className='text-muted'>  Zerodha Cares (CSR) </a><br></br>
+                    <a href='#'style={{textDecoration:"none"}} className='text-muted'>  Careers </a><br></br>
 
 
 
@@ -26,25 +26,25 @@ function Footer(){
                 <div className='col-lg-3 col-md-6 col-sm-3'>
                     <p>Support</p>
                     
-                        <a href='' style={{textDecoration:"none"}} className='text-muted'> Contact us</a><br></br>
-                        <a href='' style={{textDecoration:"none"}} className='text-muted'> Support portal</a><br></br>
-                        <a href='' style={{textDecoration:"none"}} className='text-muted'> How to file a complaint?</a><br></br>
-                        <a href='' style={{textDecoration:"none"}} className='text-muted'> Status of your complaints</a><br></br>
-                        <a href='' style={{textDecoration:"none"}} className='text-muted'> Bulletin</a><br></br>
-                        <a href='' style={{textDecoration:"none"}} className='text-muted'> Circular</a><br></br>
-                        <a href='' style={{textDecoration:"none"}} className='text-muted'> Z-Connect blog</a><br></br>
-                        <a href='' style={{textDecoration:"none"}} className='text-muted'> Downloads</a><br></br>
+                        <a href='#' style={{textDecoration:"none"}} className='text-muted'> Contact us</a><br></br>
+                        <a href='#' style={{textDecoration:"none"}} className='text-muted'> Support portal</a><br></br>
+                        <a href='#' style={{textDecoration:"none"}} className='text-muted'> How to file a complaint?</a><br></br>
+                        <a href='#' style={{textDecoration:"none"}} className='text-muted'> Status of your complaints</a><br></br>
+                        <a href='#' style={{textDecoration:"none"}} className='text-muted'> Bulletin</a><br></br>
+                        <a href='#' style={{textDecoration:"none"}} className='text-muted'> Circular</a><br></br>
+                        <a href='#' style={{textDecoration:"none"}} className='text-muted'> Z-Connect blog</a><br></br>
+                        <a href='#' style={{textDecoration:"none"}} className='text-muted'> Downloads</a><br></br>
                 </div>
                 <div className='col-lg-3 col-md-6 col-sm-3'>
                     <p>Account</p>
-                    <a href='' style={{textDecoration:"none"}} className='text-muted'>Open demat account</a><br></br>
-                    <a href='' style={{textDecoration:"none"}} className='text-muted'>Minor demat account</a><br></br>
-                    <a href='' style={{textDecoration:"none"}} className='text-muted'>NRI demat account</a><br></br>
-                    <a href='' style={{textDecoration:"none"}} className='text-muted'>Commodity</a><br></br>
-                    <a href='' style={{textDecoration:"none"}} className='text-muted'>Dematerialisation</a><br></br>
-                    <a href='' style={{textDecoration:"none"}} className='text-muted'>Fund transfer</a><br></br>
-                    <a href='' style={{textDecoration:"none"}} className='text-muted'>MTF</a><br></br>
-                    <a href='' style={{textDecoration:"none"}} className='text-muted'>Referral program</a><br></br>
+                    <a href='#' style={{textDecoration:"none"}} className='text-muted'>Open demat account</a><br></br>
+                    <a href='#' style={{textDecoration:"none"}} className='text-muted'>Minor demat account</a><br></br>
+                    <a href='#' style={{textDecoration:"none"}} className='text-muted'>NRI demat account</a><br></br>
+                    <a href='#' style={{textDecoration:"none"}} className='text-muted'>Commodity</a><br></br>
+                    <a href='#' style={{textDecoration:"none"}} className='text-muted'>Dematerialisation</a><br></br>
+                    <a href='#' style={{textDecoration:"none"}} className='text-muted'>Fund transfer</a><br></br>
+                    <a href='#' style={{textDecoration:"none"}} className='text-muted'>MTF</a><br></br>
+                    <a href='#' style={{textDecoration:"none"}} className='text-muted'>Referral program</a><br></br>
                 </div>
             </div>
             
