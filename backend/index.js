@@ -23,7 +23,7 @@ const API_KEY=process.env.API_KEY;
 app.use(
   cors({
     origin: [
-      "https://bharatstock-frontend.netlify.app",  
+      "https://bharatstock-frontend.netlify.app",
       "https://bharatstock-dashboard.netlify.app",
       "http://localhost:5173",                      
       "http://localhost:3000"
