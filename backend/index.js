@@ -15,6 +15,7 @@ const UserModel=require("./model/UserModel");
 const cookieParser = require("cookie-parser");
 const authRoute = require("./Routes/AuthRoute");
 
+
 const PORT=process.env.PORT||3002;
 const url=process.env.MONGO_URL;
 
@@ -116,11 +117,6 @@ app.get("/api/price/:symbol", async (req, res) => {
     console.error(error);
     res.status(500).json({ error: "Failed to fetch price" });
   }
-});
-
-app.get("/cleanup", async (req, res) => {
-  await UserModel.deleteMany({});
-  res.send("All users deleted ✅");
 });
 
 app.listen(PORT,()=>{

@@ -1,17 +1,19 @@
 
-import React, { useState } from "react";
+import React, { useState , useEffect} from "react";
 
 import { Link } from "react-router-dom";
-
+const API_URL = import.meta.env.VITE_API_URL;
 const Menu = () => {
  const [selectedMenu, setSelectedMenu]=useState(0);
+ 
   
 
   const handleMenuClick = (index) => {
     setSelectedMenu(index);
   };
 
-  
+ 
+
 
   const menuClass = "menu";
   const activeMenuClass = "menu selected";
@@ -84,6 +86,17 @@ const Menu = () => {
             >
               <p className={selectedMenu === 6 ? activeMenuClass : menuClass}>
                 Apps
+              </p>
+            </Link>
+          </li>
+          <li>
+             <Link
+              style={{ textDecoration: "none" }}
+              to="/profile"
+              onClick={() => handleMenuClick(7)}
+            >
+              <p className={selectedMenu === 7 ? activeMenuClass : menuClass}>
+                <i className="fa-regular fa-circle-user"></i>
               </p>
             </Link>
           </li>
